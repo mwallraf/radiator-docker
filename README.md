@@ -11,7 +11,7 @@ The content of radiator.tgz should be something like "Radiator-4.4/*"
 Download the Dockerfile, build it and run:
 
 cd /Users/mwallraf/
-git glone https://github.com/mwallraf/radiator-docker
+git glone https://github.com/mwallraf/radiator-docker.git
 cd radiator-docker
 --->> copy your official radiator source files into the working folder as filename radiator.tgz <<--
 docker build -t mwallraf/radiator .
