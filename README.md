@@ -1,10 +1,10 @@
 Radiator radius server from Open System Consultants.
 
-Since this is commercial software that should be purchased from the OCS website you need download and build the Dockerfile locally in the same folder where the Radiator source and license files are located.
+The Radiator radius software from OSC is commercial software that should be purchased from the OCS website and you need to  download and build the Dockerfile locally in the same folder where the Radiator source and license files are located.
 
 Pre-requisite:
 
-You need to purchase the Radiator software from OCS and rename the source tarball to "radiator.tgz" and copy it in the same folder als the Dockerfile before starting the build.
+Rename the downloaded source tarball to "radiator.tgz" and copy it in the same folder als the Dockerfile before starting the build.
 The content of radiator.tgz should be something like "Radiator-4.4/*"
 
 
