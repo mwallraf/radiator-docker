@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.12.0
 
 MAINTAINER Maarten Wallraf <maarten@2nms.com>
 
