@@ -2,11 +2,15 @@ FROM alpine:3.12.0
 
 MAINTAINER Maarten Wallraf <maarten@2nms.com>
 
+ARG TZ='Europe/Brussels'
+
+ENV TZ ${TZ}
+
 RUN apk update && \
     apk add alpine-sdk perl perl-dbi perl-dbd-mysql yaml perl-yaml-syck perl-digest-md5 && \
     apk add perl-ldap perl-digest-sha1 perl-digest-hmac perl-digest-perl-md5 openssl && \
     apk add libevent perl-crypt-openssl-dsa openssl-dev perl-crypt-openssl-rsa && \
-    apk add perl-crypt-openssl-random perl-net-ssleay perl-getopt-long supervisor bash && \
+    apk add perl-crypt-openssl-random perl-net-ssleay perl-getopt-long supervisor bash tzdata && \
     mkdir /app && \
     mkdir /etc/radiator
 
