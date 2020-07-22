@@ -31,6 +31,8 @@ RUN sed -i "s/require \"timelocal.pl\";/require Time::Local;/g" radiusd && \
     cp radius.cfg /etc/radiator/radiator.cfg.default && \
     cp dictionary* /etc/radiator/
 
+ADD ./etc/profile.d/aliases.sh /etc/profile.d/aliases.sh
+
 ADD ./etc/radiator/radiator.cfg /etc/radiator/
 
 CMD [ "supervisord", "-n" ]
