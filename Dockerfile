@@ -10,7 +10,7 @@ RUN apk update && \
     apk add alpine-sdk perl perl-dbi perl-dbd-mysql yaml perl-yaml-syck perl-digest-md5 && \
     apk add perl-ldap perl-digest-sha1 perl-digest-hmac perl-digest-perl-md5 openssl && \
     apk add libevent perl-crypt-openssl-dsa openssl-dev perl-crypt-openssl-rsa && \
-    apk add perl-crypt-openssl-random perl-net-ssleay perl-getopt-long supervisor bash tzdata && \
+    apk add perl-crypt-openssl-random perl-net-ssleay perl-getopt-long supervisor bash tzdata mariadb-client && \
     mkdir /app && \
     mkdir /etc/radiator
 
