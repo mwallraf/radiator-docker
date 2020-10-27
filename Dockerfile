@@ -22,6 +22,8 @@ ADD ./etc/supervisord.ini /etc/supervisor.d/radiator.ini
 
 RUN mv /app/Rad* /app/radiator
 
+ADD ./src/contrib/*pm /app/radiator/Radius/
+
 WORKDIR /app/radiator
 
 RUN sed -i "s/require \"timelocal.pl\";/require Time::Local;/g" radiusd && \
@@ -34,5 +36,8 @@ RUN sed -i "s/require \"timelocal.pl\";/require Time::Local;/g" radiusd && \
 ADD ./etc/profile.d/aliases.sh /etc/profile.d/aliases.sh
 
 ADD ./etc/radiator/radiator.cfg /etc/radiator/
+
+RUN mkdir /etc/periodic/1min && \
+    echo "*/5       *       *       *       *       run-parts /etc/periodic/5min" >> /etc/crontabs/root
 
 CMD [ "supervisord", "-n" ]
