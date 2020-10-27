@@ -40,4 +40,7 @@ ADD ./etc/radiator/radiator.cfg /etc/radiator/
 RUN mkdir /etc/periodic/1min && \
     echo "*/5       *       *       *       *       run-parts /etc/periodic/5min" >> /etc/crontabs/root
 
+RUN crontab -l
+
+
 CMD [ "supervisord", "-n" ]
