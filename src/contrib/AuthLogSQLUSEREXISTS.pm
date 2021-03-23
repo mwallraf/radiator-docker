@@ -87,7 +87,7 @@ sub authlog
 	   && $s == $main::REJECT)
     {
 
-        if ($reason == $self->quote("No such user")) {
+        if ($reason =~ /No such user/i ) {
             my $usr = $p->getUserName();
             &main::log($main::LOG_DEBUG, "Skip SQL logging - $reason: $usr");
             return;
